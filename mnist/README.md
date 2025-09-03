@@ -1,0 +1,2 @@
+# 手写数字的识别
+学习rethinkfun课程写的简单项目。其中train中的网络代码来源于rethinkfun。简单的加上了一个detect文件，使用训练好的weights和biases进行手写数字地识别。

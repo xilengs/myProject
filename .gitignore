@@ -1,0 +1,4 @@
+mnist/data/mnist_test_png/
+mnist/data/mnist_train_png/
+mnist/data/mnist_test.csv/
+mnist/data/mnist_train.csv/
