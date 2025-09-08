@@ -37,7 +37,7 @@ class MNISTDataset(Dataset):
                 items = line.strip().split(",")
                 images.append([float(x) for x in items[1:]])
                 labels.append(int(items[0]))
-            return images, labels
+        return images, labels
     
     def __getitem__(self, index):
         image = torch.tensor(self.images[index], dtype=torch.float32).view(-1)

@@ -1,0 +1,1 @@
+pred = torch.argmax(outputs, dim=1)
