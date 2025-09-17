@@ -1,0 +1,7 @@
+{
+    "python.defaultInterpreterPath": "C:\\d\\software\\python\\python.exe",
+    "python.terminal.activateEnvironment": true,
+    "terminal.integrated.env.osx": {
+    "PATH": "C:\\d\\software\\python\\python.exe"
+}
+}

@@ -34,7 +34,7 @@ class LeNet(nn.Module):
 # 定义数据集
 class MNISTDataset(Dataset):
     def __init__(self, file_path):
-        # 可以不写，因为Dataset.__init__本事几乎是空的
+        # 可以不写，因为Dataset.__init__原本几乎是空的
         super().__init__()
         self.images, self.labels = self._read_file(file_path)
     

@@ -1,6 +1,24 @@
+# ==========================
+# 数据 & 模型
+# ==========================
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
 mnist/data/mnist_test_png/
 mnist/data/mnist_train_png/
 mnist/data/mnist_test.csv
 mnist/data/mnist_train.csv
 mnist/data/data.zip
 DogCatClassify/data/PetImages/
+AlexNet/data/train/
+AlexNet/data/val/
+AlexNet/train.zip
+RNN/en2cn.zip
+RNN/en2cn/train_en.txt
+RNN/en2cn/train_zh.txt
+RNN/en2cn/valid_en.txt
+RNN/en2cn/valid_zh.txt
+RNN/.vscode/settings.json
+RNN/.vscode/launch.json
