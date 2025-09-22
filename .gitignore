@@ -22,3 +22,4 @@ RNN/en2cn/valid_en.txt
 RNN/en2cn/valid_zh.txt
 RNN/.vscode/settings.json
 RNN/.vscode/launch.json
+data/

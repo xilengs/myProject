@@ -1,0 +1,3 @@
+title: "我的项目文档"
+theme: null   # 禁用默认 Jekyll 主题
+markdown: kramdown
