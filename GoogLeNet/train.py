@@ -50,7 +50,13 @@ def train_val_data_load(train_img_dir, train_label_txt, val_img_dir, val_label_t
 
     return train_loader, val_loader
 
-def train_model_process(model, train_loader, val_loader, save_path="model", lr=0.001, epochs=10):
+def train_model_process(train_loader, val_loader, num_classes=2, load_model=None, save_path="model", lr=0.001, epochs=10):
+    # 传入load_model(模型参数路径)以继续训练
+    # 否则重新定义模型并训练
+    if load_model:
+        model = torch.load(load_model)
+    else:
+        model = GoogLeNet(num_classes)
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     print(device)
     optimizer = optim.Adam(model.parameters(), lr=lr)
@@ -182,7 +188,6 @@ def matplot_acc_loss(train_process, save_path="model"):
 
     plt.tight_layout() # 自动调整
     # plt.ion()
-    plt.show()
 
     i = 1
     while True:
@@ -193,6 +198,8 @@ def matplot_acc_loss(train_process, save_path="model"):
         i += 1
     plt.savefig(os.path.join(dir_path, "google_net_output.png"))
 
+    plt.show()
+
 
 
 if __name__ == '__main__':
@@ -202,9 +209,12 @@ if __name__ == '__main__':
     test_label_txt = "../data/DogCat/val/labels.txt"
     batch_size = 128
     epochs = 20
-    lr = 0.001
+    # lr = 0.001
+    lr = 0.0005
     save_path = "model"
+    load_model = "model/run2/google_net_best_model.pth"
 
     train_loader, val_loader = train_val_data_load(train_image_dir, train_label_txt, test_image_dir, test_label_txt, batch_size)
-    result = train_model_process(GoogLeNet(2), train_loader, val_loader, save_path, lr, epochs)
+    # result = train_model_process(train_loader, val_loader, 2, save_path, lr, epochs)
+    result = train_model_process(train_loader, val_loader, 2, load_model, save_path, lr, epochs)
     matplot_acc_loss(result, save_path)
