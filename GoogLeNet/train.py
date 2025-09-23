@@ -213,7 +213,7 @@ if __name__ == '__main__':
     # lr = 0.001
     lr = 0.0005
     save_path = "model"
-    load_model = "model/run2/google_net_best_model.pth"
+    load_model = "model/run3/google_net_best_model.pth"
 
     train_loader, val_loader = train_val_data_load(train_image_dir, train_label_txt, test_image_dir, test_label_txt, batch_size)
     # result = train_model_process(train_loader, val_loader, 2, save_path, lr, epochs)
