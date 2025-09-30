@@ -6,6 +6,12 @@
 *.rar
 *.7z
 
+# ==========================
+# 临时文件
+# ==========================
+**/.idea/
+**/*.iml
+
 mnist/data/mnist_test_png/
 mnist/data/mnist_train_png/
 mnist/data/mnist_test.csv
